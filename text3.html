@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+      <title> Horiscope SIGN</title>
+<body style="background-image: url(/home/pif/Desktop/javascript/drop.jpg);">
+
+    <center><h1>WHO YOU ARE ACCORDING TO YOUR ZODIAC SIGN</h1>
+<form method = "POST" action="">
+  Your Day:<br>
+  <input type="text" name="day" placeholder="Your Birthday" id = "day">
+  <br><br>
+  YOur Month:<br>
+  <input type="text" name="month" placeholder="Your BirthMonth" id = "month">
+  <br><br>
+ 
+</form> 
+ <button onclick="myFunction()">Submit</button>
+ <p id ="demo">Result :</p>
+ <div id="photo">photo:</div>
+ </center>
+<script>
+function myFunction() {
+var day = document.getElementById("day").value; 
+var month = document.getElementById("month").value;
+if(day>31 || day<1)
+{
+alert('Invalid date Input!');
+}
+if(month>12 || month<1)
+{
+alert('Invalid month Input!');
+}
+var info;
+var text;
+if((month==1 && (day>=20 && day<=31))||(month==2 && (day>=1 && day<=18))){
+   info="Aquarius";
+}else if((month==2 && (day>=19 && day<=28))||(month==3 && (day>=1 && day<=20))){
+   info="Pisces";
+}else if((month==3 && (day>=21 && day<=31))||(month==4 && (day>=1 && day<=19))){
+   info="Aries";
+}else if((month==4 && (day>=20 && day<=30))||(month==5 && (day>=1 && day<=20))){
+   info="Taurus";
+}else if((month==5 && (day>=21 && day<=31))||(month==6 && (day>=1 && day<=20))){
+   info="Gemini";
+}else if((month==6 && (day>=21 && day<=30))||(month==7 && (day>=1 && day<=22))){
+   info="Cancer";
+}else if((month==7 && (day>=23 && day<=31))||(month==8 && (day>=1 && day<=22))){
+   info="Leo";
+}else if((month==8 && (day>=23 && day<=31))||(month==9 && (day>=1 && day<=22))){
+   info="Virgos";
+}else if((month==9 && (day>=23 && day<=30))||(month==10 && (day>=1 && day<=22))){
+   info="Libra";
+}else if((month==10 && (day>=23 && day<=31))||(month==11 && (day>=1 && day<=21))){
+   info="Scorpio";
+}else if((month==11 && (day>=22 && day<=30))||(month==12 && (day>=1 && day<=21))){
+   info="Sagittarius";
+}else if((month==12 && (day>=22 && day<=31))||(month==1 && (day>=1 && day<=19))){
+   info="Capricorn";
+}else{
+text="Sorry unable to give you information";
+}
+
+switch(info)
+{
+case "Aquarius":
+document.getElementById("photo").innerHTML="<img src='/home/pif/Desktop/javascript/aquarious.jpg'width=40% 'height=40%>";
+text="Aquarius-born are shy and quiet , but on the other hand they can be eccentric and energetic. However, in both cases, they are deep thinkers and highly intellectual people who love helping others. They are able to see without prejudice, on both sides, which makes them people who can easily solve problems.";
+break;
+
+case "Pisces":
+document.getElementById("photo").innerHTML="<img src='/home/pif/Desktop/javascript/Pisces.jpg'width=40% 'height=40%>";
+text="Pisces are very friendly, so they often find themselves in a company of very different people. Pisces are selfless, they are always willing to help others, without hoping to get anything back.";
+
+case "Aries":
+document.getElementById("photo").innerHTML="<img src='/home/pif/Desktop/javascript/Aries.png'width=40% 'height=40%>";
+text="Aries is ruled by Mars, the fiery red planet of energy and drive Highly impatient and competitive, many Aries have the fighting spirit of your mythological ruler. You love to be a hero–or to be swept away by one.";
+break;
+
+case "Taurus":
+document.getElementById("photo").innerHTML="<img src='/home/pif/Desktop/javascript/Taurus.jpg'width=40% 'height=40%>";
+text="Taurus is the sign that harvests the fruits of labor. They feel the need to always be surrounded by love and beauty, turned to the material world, hedonism, and physical pleasures. People born with their Sun in Taurus are sensual and tactile, considering touch and taste the most important of all senses";
+break;
+
+case "Gemini":
+document.getElementById("photo").innerHTML="<img src='/home/pif/Desktop/javascript/qMziVX.jpg'width=40% 'height=40%>";
+text="Expressive and quick-witted, Gemini represents two different personalities in one and you will never be sure which one you will face. They are sociable, communicative and ready for fun, with a tendency to suddenly get serious, thoughtful and restless.";
+break;
+
+case "Cancer":
+document.getElementById("photo").innerHTML="<img src='/home/pif/Desktop/javascript/Cancer.jpg'width=40% 'height=40%>";
+text="Deeply intuitive and sentimental, Cancer can be one of the most challenging zodiac signs to get to know. They are very emotional and sensitive, and care deeply about matters of the family and their home. Cancer is sympathetic and attached to people they keep close.";
+break;
+
+case "Leo":
+document.getElementById("photo").innerHTML="<img src='/home/pif/Desktop/javascript/Leo.jpg'width=40% 'height=40%>";
+text="People born under the sign of Leo are natural born leaders. They are dramatic, creative, self-confident, dominant and extremely difficult to resist, able to achieve anything they want to in any area of life they commit to. There is a specific strength to a Leo and their 'king of the jungle' status. Leo often has many friends for they are generous and loyal. Self-confident and attractive.";
+break;
+
+case "Virgos":
+document.getElementById("photo").innerHTML="<img src='/home/pif/Desktop/javascript/virgo.jpg'width=40% 'height=40%>";
+text="Virgos are always paying attention to the smallest details and their deep sense of humanity makes them one of the most careful signs of the zodiac. Their methodical approach to life ensures that nothing is left to chance, and although they are often tender, their heart might be closed for the outer world. ";
+break;
+
+case "Libra":
+document.getElementById("photo").innerHTML="<img src='/home/pif/Desktop/javascript/Libra.jpg'width=40% 'height=40%>";
+text="People born under the sign of Libra are peaceful, fair, and they hate being alone. Partnership is very important for them, as their mirror and someone giving them the ability to be the mirror themselves.";
+break;
+
+case "Scorpio":
+document.getElementById("photo").innerHTML="<img src='/home/pif/Desktop/javascript/b841a086413cdec521fe054da5d51110.jpg'width=40% 'height=40%>";
+text="Scorpio-born are passionate and assertive people. They are determined and decisive, and will research until they find out the truth. Scorpio is a great leader, always aware of the situation and also features prominently in resourcefulness.";
+break;
+
+case "Sagittarius":
+document.getElementById("photo").innerHTML="<img src='/home/pif/Desktop/javascript/Sagittarius.jpg'width=40% 'height=40%>";
+text="Curious and energetic, Sagittarius is one of the biggest travelers among all zodiac signs. Their open mind and philosophical view motivates them to wander around the world in search of the meaning of life.Sagittarius is extrovert, optimistic and enthusiastic, and likes changes. ";
+break;
+
+case "Capricorn":
+document.getElementById("photo").innerHTML="<img src='/home/pif/Desktop/javascript/capricorn.jpg'width=40% 'height=40%>";
+text="Capricorn is a sign that represents time and responsibility, and its representatives are traditional and often very serious by nature. These individuals possess an inner state of independence that enables significant progress both in their personal and professional lives.";
+break;
+
+}
+
+
+document.getElementById("demo").innerHTML = text;
+}
+</script>
+</body>
+</html>
